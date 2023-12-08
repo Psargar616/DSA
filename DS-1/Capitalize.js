@@ -49,5 +49,5 @@ function Capitalise(paragraph) {
   return arr.join("");
 }
 
-let ans = Capitalise("The Quick Brown Fox Jumps Over The Lazy Dog.")
+let ans = Capitalise("The quick brown fox jumps over the lazy dog.")
 console.log(ans)

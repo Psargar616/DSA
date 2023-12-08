@@ -37,3 +37,25 @@ function countVowels(word) {
 
 let ans = countVowels("language")
 console.log("Count vowels in 'language' :",ans);
+
+function countVowels2(s) {
+  let m = new Map();
+  let n = s.length;
+  for (let i = 0; i < n; i++) {
+    let ch = s[i];
+
+     if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' 
+     || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'   )
+      {
+        if (m.has(ch)) {
+          m.set(ch, m.get(ch) + 1);
+        } else {
+          m.set(ch, 1);
+        }
+      }
+    }
+    return m;
+  }
+
+  let ans2 = countVowels2("language")
+console.log("Count vowels in 'language' :",ans2);
