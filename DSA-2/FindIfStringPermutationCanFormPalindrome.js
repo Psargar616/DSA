@@ -40,6 +40,15 @@ Aab is not a permutation of any palindrome
  */
 
 //  TC = O(N) SC= O(26+26) = O(1) 
+
+// Approach = the permutation is rearranging the letters. we have to find if by rearranging the characters of given string string we can make a palindrome.
+// Palindrome 
+//    |_ Even length => all character appear even times , ex => maam
+//    |_ Odd length => All character appear even times except middle char, ex => madam
+
+// So we just have to count the frequencies of all character in the string and if characters with odd count is less than or equal to one then the permutation can be palindrome.
+
+
 function isPermutationPalidrome(s) {
   let count = 0;
   let map = new Map();

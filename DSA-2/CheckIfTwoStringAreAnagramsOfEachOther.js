@@ -34,18 +34,21 @@ false
  */
 
 function validAnagram(s, t) {
+  // if s is empty and t is undefined return true
   if (s == "" && t == undefined) return true;
+  // if s is undefined and t is undefined return false
   if (s == undefined || t == undefined) return false;
-
+  
   let n = s.length;
   let m = t.length;
-
+  // compare length of strings
   if (n !== m) {
     return false;
   }
+  // use split() sort() and join() to check if strings are anagrams of each other
   let str1 = s.split("").sort().join("");
   let str2 = t.split("").sort().join("");
-
+  // if(str1 === str2) also works
   for (let i = 0; i < n; i++) {
     if (str1[i] != str2[i]) {
       return false;
@@ -54,7 +57,6 @@ function validAnagram(s, t) {
 
   return true;
 }
-
 
 
 console.log("Are 'anagram' and 'nagaram' anagrams of each other : " + validAnagram("nagaram", "anagram" ))
