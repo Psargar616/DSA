@@ -29,7 +29,7 @@ e.g. At each index store its frequency + the frequency of its previous index.
 const countingSort = (arr, min, max) => {
     // count is object where i = key/element and count[i] = value/frequencyOfElement
   const count = {};
-  // First populate the count object
+  // First populate the count object 
   for (let i = min; i <= max; i++) {
     count[i] = 0;
   }
