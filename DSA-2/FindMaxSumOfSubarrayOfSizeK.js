@@ -40,7 +40,9 @@ function maxSum(arr, n, k) {
 
   // Compute sum of first window of size k
   let res = 0;
-  for (let i = 0; i < k; i++) res += arr[i];
+  for (let i = 0; i < k; i++) {
+    res += arr[i];
+  }
 
   // Compute sums of remaining windows by
   // removing first element of previous

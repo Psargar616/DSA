@@ -28,6 +28,7 @@ The lines of length 8 and 7 form a container that can hold 7*7=49 units of water
  */
 
 // 2 pointer approach
+// TC - O(N)
 function maxArea(height) {
   let ans = 0,
     left = 0,

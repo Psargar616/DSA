@@ -45,3 +45,19 @@ console.log(
   "Missing +ve number in [3, 4 , -1, 1] array is : " +
     firstMissingPositive(4, arr)
 );
+
+// Solution 2 = 
+
+var firstMissingPositive = function (nums) {
+  var missingNum = 1
+  // sort nums
+  nums.sort((a,b)=>a-b) 
+  for(let i=0;i<nums.length;i++){
+      if(missingNum===nums[i]){
+          missingNum++
+      }
+  }
+  
+  return missingNum
+
+};
